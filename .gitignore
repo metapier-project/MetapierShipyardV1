@@ -1,0 +1,23 @@
+# dependencies
+node_modules
+
+# misc
+.DS_Store
+
+# .env files
+.env
+.env.mainnet
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# emulator datastore
+flowdb
+
+# env
+.vscode
+.exrc
+.eslintcache
+.idea/

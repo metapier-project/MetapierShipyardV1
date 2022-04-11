@@ -1,0 +1,83 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"FungibleToken": {
+			"source": "./contracts/FungibleToken.cdc",
+			"aliases": {
+				"testnet": "0x9a0766d93b6608b7",
+				"mainnet": "0xf233dcee88fe0abe"
+			}
+		},
+		"NonFungibleToken": {
+			"source": "./contracts/NonFungibleToken.cdc",
+			"aliases": {
+				"testnet": "0x631e88ae7f1d7c20",
+				"mainnet": "0x1d7e57aa55817448"
+			}
+		},
+		"MetapierLaunchpad": "./contracts/MetapierLaunchpad.cdc",
+		"MetapierLaunchpadPass": "./contracts/MetapierLaunchpadPass.cdc",
+		"MetapierLaunchpadOwnerPass": "./contracts/MetapierLaunchpadOwnerPass.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "b7c1aa864410b41f098c6d4cef55a7b1bf1671bc8faf97cd5a930aed62efaca7"
+		},
+		"launchpad-pass-admin": {
+			"address": "01cf0e2f2f715450",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "6086092255a2b3d6f36695ded8ed3ecdfe7e27cbedb64244a92f64cf98fe7af8"
+			}
+		},
+		"launchpad-admin": {
+			"address": "179b6b1cb6755e31",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "a6058aa247227e16c533263c676e100f0d17ff6721d20c8e0cbb260cfd5ac911"
+			}
+		},
+		"emulator-admin": {
+			"address": "f3fcd2c1a78f5eee",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "8d330c5eed1bc9216e0242ed0f19353e9e05dc41c2104b65960111b6942523c1"
+			}
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-admin": [
+				"FungibleToken",
+				"NonFungibleToken"
+			],
+			"launchpad-pass-admin": [
+				"MetapierLaunchpadPass",
+				"MetapierLaunchpadOwnerPass"
+			],
+			"launchpad-admin": [
+				"MetapierLaunchpad"
+			]
+		}
+	}
+}

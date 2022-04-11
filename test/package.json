@@ -1,0 +1,24 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "babel-jest": "^27.4.6",
+    "flow-js-testing": "^0.2.3-alpha.4",
+    "jest": "^27.4.7",
+    "jest-environment-node": "^27.4.6"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "mustache": "^4.2.0"
+  }
+}
